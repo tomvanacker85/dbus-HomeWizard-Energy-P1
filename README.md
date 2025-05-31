@@ -32,9 +32,10 @@ So what is the script doing:
 That's it 😄
 
 ### Pictures
-![Overview](/screenshots/VenusOS overview.png)
+![Overview]()
 
-![Device list](/screenshots/VenusOS device list.png)
+![Data](screenshots/VenusOS_data.png)
+![Device list](screenshots/VenusOS_device list.png)
 
 ![Values](/screenshots/VenusOS values.png)
 
