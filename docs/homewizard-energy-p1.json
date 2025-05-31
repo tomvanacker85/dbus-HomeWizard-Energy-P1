@@ -1,0 +1,40 @@
+{
+  "wifi_ssid": "WiFi-2.4-8EE0",
+  "wifi_strength": 100,
+  "smr_version": 50,
+  "meter_model": "LGF5E360",
+  "unique_id": "314C475A30353831363931383435",
+  "active_tariff": 2,
+  "total_power_import_kwh": 17.411,
+  "total_power_import_t1_kwh": 13.243,
+  "total_power_import_t2_kwh": 4.168,
+  "total_power_export_kwh": 35.445,
+  "total_power_export_t1_kwh": 33.56,
+  "total_power_export_t2_kwh": 1.885,
+  "active_power_w": 5,
+  "active_power_l1_w": 942,
+  "active_power_l2_w": -1115,
+  "active_power_l3_w": 177,
+  "active_voltage_l1_v": 229.1,
+  "active_voltage_l2_v": 229.9,
+  "active_voltage_l3_v": 228.1,
+  "active_current_a": 9.94,
+  "active_current_l1_a": 4.24,
+  "active_current_l2_a": 4.87,
+  "active_current_l3_a": 0.83,
+  "active_power_average_w": 23,
+  "montly_power_peak_w": 2470,
+  "montly_power_peak_timestamp": 250527201500,
+  "total_gas_m3": 1.097,
+  "gas_timestamp": 250531095456,
+  "gas_unique_id": "2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D",
+  "external": [
+    {
+      "unique_id": "2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D",
+      "type": "gas_meter",
+      "timestamp": 250531095456,
+      "value": 1.097,
+      "unit": "m3"
+    }
+  ]
+}
