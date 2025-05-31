@@ -8,7 +8,7 @@ Idea is pasend on @RalfZim project linked below.
 
 
 ## Inspiration
-Forked from https://github.com/back2basic/dbus-Home-Wizzard-Energy-P1
+Forked from https://github.com/back2basic/dbus-Home-Wizzard-Energy-P1. Also used a lot of code from https://github.com/mr-manuel/venus-os_dbus-mqtt-grid.
 
 ## How it works
 ### My setup
@@ -39,7 +39,7 @@ That's it 😄
 
 
 ## Install / Update
-1. Login to your Venus OS device via SSH. See Venus OS:Root Access for more details.
+1. Login to your Venus OS device via SSH. See [Venus OS: Root Access](https://www.victronenergy.com/live/ccgx:root_access) for more details.
 
 2. Execute this commands to download and copy the files:
 
@@ -68,6 +68,7 @@ To uninstall the service:
 
 ## Restart
 To restart the service:
+
 ```bash /data/etc/dbus-mqtt-grid/restart.sh```
 
 ## Debugging
@@ -76,9 +77,9 @@ To check the logs of the default instance:
 tail -n 100 -F /data/log/dbus-homewizard-energy-p1/current | tai64nlocal
 ```
 
-The service status can be checked with svstat: ```svstat /service/dbus-mqtt-grid```
-
-This will output somethink like ```/service/dbus-homewizard-energy-p1: up (pid 26270) 1133 seconds```
+The service status can be checked with svstat: 
+```svstat /service/dbus-mqtt-grid```
+This will output somethink like ``/service/dbus-homewizard-energy-p1: up (pid 26270) 1133 seconds``.
 
 If the seconds are under 5 then the service crashes and gets restarted all the time. If you do not see anything in the logs you can increase the log level in /data/etc/dbus-homewizard-energy-p1/config.ini by changing level=logging.WARNING to level=logging.INFO or level=logging.DEBUG and restarting the service. For available log values: see https://docs.python.org/3/library/logging.html#levels.
 
