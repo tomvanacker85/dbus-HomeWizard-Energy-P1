@@ -2,7 +2,7 @@
 Integrate HomeWizard Energy P1 meter into [Victron Energies Venus OS](https://github.com/victronenergy/venus)
 
 ## Purpose
-With the scripts in this repo it should be easy possible to install, uninstall, restart a service that connects the HomeWizard Energy P1 to the VenusOS and GX devices from Victron.
+With the scripts in this repo you can install, uninstall and restart a service that connects the HomeWizard Energy P1 to the VenusOS and GX devices from Victron.
 
 ## Inspiration
 Forked from https://github.com/back2basic/dbus-Home-Wizzard-Energy-P1. Also used a lot of code from https://github.com/mr-manuel/venus-os_dbus-mqtt-grid.
@@ -86,7 +86,7 @@ This will output somethink like ``/service/dbus-homewizard-energy-p1: up (pid 26
 
 If the seconds are under 5 then the service crashes and gets restarted all the time. If you do not see anything in the logs you can increase the log level in ``/data/etc/dbus-homewizard-energy-p1/config.ini`` by changing ``level=logging.WARNING`` to ``level=logging.INFO`` or ``level=logging.DEBUG`` and restarting the service. For available log values: see https://docs.python.org/3/library/logging.html#levels.
 
-If the script stops with the message dbus.exceptions.NameExistsException: Bus name already exists: com.victronenergy.grid.homewizard_energy_p1" it means that the service is still running or another service is using that bus name.
+If the script stops with the message ``dbus.exceptions.NameExistsException: Bus name already exists: com.victronenergy.grid.homewizard_energy_p1`` it means that the service is still running or another service is using that bus name.
 
 ## Compatibility
 This software supports the latest three stable versions of Venus OS. It may also work on older versions, but this is not guaranteed.
