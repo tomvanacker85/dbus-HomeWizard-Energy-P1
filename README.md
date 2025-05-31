@@ -44,8 +44,8 @@ Login to your Venus OS device via SSH. See Venus OS:Root Access for more details
 Execute this commands to download and copy the files:
 
 ```
-wget -O /tmp/download_dbus-mqtt-grid.sh https://raw.githubusercontent.com/mr-manuel/venus-os_dbus-mqtt-grid/master/download.sh
-bash /tmp/download_dbus-mqtt-grid.sh
+wget -O /tmp/download_dbus-homewizard-energy-p1.sh https://raw.githubusercontent.com/tomvanacker85/dbus-homewizard-energy-p1/master/download.sh
+bash /tmp/download_dbus-mqtt-homewizard-energy-p1.sh
 ```
 
 
