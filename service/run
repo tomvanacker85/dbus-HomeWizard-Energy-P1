@@ -1,3 +1,0 @@
-#!/bin/sh
-exec 2>&1
-python /data/dbus-HomeWizard-Energy-P1/dbus-homewizard-energy-p1.py
