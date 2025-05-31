@@ -39,31 +39,54 @@ That's it 😄
 
 
 ## Install / Update
-Login to your Venus OS device via SSH. See Venus OS:Root Access for more details.
+1. Login to your Venus OS device via SSH. See Venus OS:Root Access for more details.
 
-Execute this commands to download and copy the files:
+2. Execute this commands to download and copy the files:
 
 ```
 wget -O /tmp/download_dbus-homewizard-energy-p1.sh https://raw.githubusercontent.com/tomvanacker85/dbus-homewizard-energy-p1/master/download.sh
 bash /tmp/download_dbus-homewizard-energy-p1.sh
 ```
 
+### Extra steps for your first installation
+3. Edit the config file to fit your needs. The correct command for your installation is shown after the installation.
+```nano /data/etc/dbus-mqtt-grid/config.ini```
 
-## Install & Configuration
-### Get the code
-Just grap a copy of the main branche and copy them to `/data/dbus-Home-Wizzard-Energy-P1`.
-After that call the install.sh script.
+4. Install the driver as a service. The correct command for your installation is shown after the installation.
+```bash /data/etc/dbus-mqtt-grid/install.sh```
+The daemon-tools should start this service automatically within seconds.
 
-The following script should do everything for you:
+## Config
+Copy or rename the config.sample.ini to config.ini in the ``/data/etc/dbus-mqtt-grid/`` folder and change it as you need it.
+
+### JSON structure
+
+## Uninstall
+To uninstall the service:
+
+```bash /data/etc/dbus-mqtt-grid/uninstall.sh```
+
+## Restart
+To restart the service:
+```bash /data/etc/dbus-mqtt-grid/restart.sh```
+
+## Debugging
+To check the logs of the default instance:
 ```
-wget https://github.com/tomvanacker85/dbus-HomeWizard-Energy-P1/archive/refs/heads/main.zip
-unzip main.zip "dbus-HomeWizard-Energy-P1-main/*" -d /data
-mv /data/dbus-HomeWizard-Energy-P1-main /data/dbus-HomeWizard-Energy-P1
-chmod a+x /data/dbus-HomeWizard-Energy-P1/install.sh
-/data/dbus-HomeWizard-Energy-P1/install.sh
-rm main.zip
+tail -n 100 -F /data/log/dbus-homewizard-energy-p1/current | tai64nlocal
 ```
-⚠️ Check configuration after that - because service is already installed an running and with wrong connection data (host, username, pwd) you will spam the log-file
+
+The service status can be checked with svstat: ```svstat /service/dbus-mqtt-grid```
+
+This will output somethink like ```/service/dbus-homewizard-energy-p1: up (pid 26270) 1133 seconds```
+
+If the seconds are under 5 then the service crashes and gets restarted all the time. If you do not see anything in the logs you can increase the log level in /data/etc/dbus-homewizard-energy-p1/config.ini by changing level=logging.WARNING to level=logging.INFO or level=logging.DEBUG and restarting the service. For available log values: see https://docs.python.org/3/library/logging.html#levels.
+
+If the script stops with the message dbus.exceptions.NameExistsException: Bus name already exists: com.victronenergy.grid.homewizard_energy_p1" it means that the service is still running or another service is using that bus name.
+
+## Compatibility
+This software supports the latest three stable versions of Venus OS. It may also work on older versions, but this is not guaranteed.
+
 
 ### Change config.ini
 Within the project there is a file `/data/dbus-Home-Wizzard-Energy-P1/config.ini` - just change the values - most important is the host, username and password in section "ONPREMISE". More details below:
