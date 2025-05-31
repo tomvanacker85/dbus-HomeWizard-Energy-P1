@@ -38,6 +38,17 @@ That's it 😄
 ![SmartMeter - Device Details](img/VenusOs_Service.png)
 
 
+## Install / Update
+Login to your Venus OS device via SSH. See Venus OS:Root Access for more details.
+
+Execute this commands to download and copy the files:
+
+```
+wget -O /tmp/download_dbus-mqtt-grid.sh https://raw.githubusercontent.com/mr-manuel/venus-os_dbus-mqtt-grid/master/download.sh
+bash /tmp/download_dbus-mqtt-grid.sh
+```
+
+
 ## Install & Configuration
 ### Get the code
 Just grap a copy of the main branche and copy them to `/data/dbus-Home-Wizzard-Energy-P1`.
