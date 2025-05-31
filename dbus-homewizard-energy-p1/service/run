@@ -1,4 +1,4 @@
 #!/bin/sh
 echo "*** starting dbus-homewizard-energy-p1 ***"
 exec 2>&1
-python /data/dbus-homewizard-energy-p1/dbus-homewizard-energy-p1.py
+python /data/etc/dbus-homewizard-energy-p1/dbus-homewizard-energy-p1.py
