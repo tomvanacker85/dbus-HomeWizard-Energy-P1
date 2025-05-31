@@ -9,7 +9,7 @@ Forked from https://github.com/back2basic/dbus-Home-Wizzard-Energy-P1. Also used
 
 ## How it works
 ### My setup
-- ([HomeWizard Energy P1](https://www.homewizard.com/nl-be/wi-fi-p1-meter))
+- [HomeWizard Energy P1](https://www.homewizard.com/nl-be/wi-fi-p1-meter)
   - 3-phase installation
   - Connected to Wifi network
   - IP 192.168.1.42
@@ -32,19 +32,17 @@ The script runs as a service and connects to and publishes data on the dbus of V
 
 2. Execute this commands to download and copy the files:
 
-```
-wget -O /tmp/download_dbus-homewizard-energy-p1.sh https://raw.githubusercontent.com/tomvanacker85/dbus-homewizard-energy-p1/master/download.sh
-bash /tmp/download_dbus-homewizard-energy-p1.sh
-```
+       wget -O /tmp/download_dbus-homewizard-energy-p1.sh https://raw.githubusercontent.com/tomvanacker85/dbus-homewizard-energy-p1/master/download.sh
+       bash /tmp/download_dbus-homewizard-energy-p1.sh
 
 ### Extra steps for your first installation
 3. Edit the config file to fit your needs. The correct command for your installation is shown after the installation.
 
-```nano /data/etc/dbus-mqtt-grid/config.ini```
+       nano /data/etc/dbus-mqtt-grid/config.ini
 
 4. Install the driver as a service. The correct command for your installation is shown after the installation.
 
-  ```bash /data/etc/dbus-mqtt-grid/install.sh```
+       bash /data/etc/dbus-mqtt-grid/install.sh
 The daemon-tools should start this service automatically within seconds.
 
 ## Config
