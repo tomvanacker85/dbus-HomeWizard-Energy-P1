@@ -45,7 +45,7 @@ Execute this commands to download and copy the files:
 
 ```
 wget -O /tmp/download_dbus-homewizard-energy-p1.sh https://raw.githubusercontent.com/tomvanacker85/dbus-homewizard-energy-p1/master/download.sh
-bash /tmp/download_dbus-mqtt-homewizard-energy-p1.sh
+bash /tmp/download_dbus-homewizard-energy-p1.sh
 ```
 
 
