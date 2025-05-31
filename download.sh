@@ -1,7 +1,7 @@
 #!/bin/bash
 
 driver_path="/data/etc"
-driver_name="dbus-HomeWizard-Energy-P1"
+driver_name="dbus-homewizard-energy-p1"
 
 echo ""
 echo ""
