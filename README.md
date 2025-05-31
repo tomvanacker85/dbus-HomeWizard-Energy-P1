@@ -32,10 +32,11 @@ So what is the script doing:
 That's it 😄
 
 ### Pictures
-![Tile Overview](img/VenusOs_Overview.png)
-![Remote Console - Overview](img/VenusOs_DeviceList.png) 
-![SmartMeter - Values](img/VenusOs_P1.png)
-![SmartMeter - Device Details](img/VenusOs_Service.png)
+![Overview](screenshots/VenusOS overview.png)
+![Device list](screenshots/VenusOS device list.png)
+![Values](screenshots/VenusOS values.png)
+![Service](screenshots/VenusOS service.png)
+
 
 
 ## Install / Update
