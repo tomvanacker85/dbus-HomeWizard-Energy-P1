@@ -2,7 +2,7 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 SERVICE_NAME=$(basename $SCRIPT_DIR)
 
-echo
+echo "$SCRIPT_DIR / $SERVICE_NAME"
 echo "Restarting $SERVICE_NAME..."
 
 pid=$(pgrep -f "python $SCRIPT_DIR/$SERVICE_NAME.py")
